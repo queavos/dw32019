@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><%=link_to 'Inicio',  main_index_path %></li>
+      <li><%=link_to 'saludo',  main_saludo_path %></li>
+      <li><%=link_to 'Formulario', archivo_index_path %></li>
+    </ul>
+Nombre: <%= @nombre %>
+<br>
+Apellido:
+    <%= @apellido %> <br>
+  <%= link_to 'Formulario',  archivo_index_path %>
+  </body>
+</html>
