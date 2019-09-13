@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <title>test</title>
+  </head>
+  <body>
+<h1 class="card" >Archivo#index</h1>
+    <form class="" action="<%= archivo_create_path %>"  method="post">
+    <p>
+      <input type="hidden" name="id" value="<%= @persona.id  %> ">
+      <input type="text" name="nombre" value="<%= @persona.nombre  %>" placeholder="ingrese su nombre"> <br></p>
+      <p>
+        <input type="text" name="apellido" value="<%= @persona.apellido  %>" placeholder="ingrese su apellido"></p>
+
+    <button type="submit" name="button" class="btn btn-primary ">Enviar</button>
+    </form>
+  </body>
+</html>

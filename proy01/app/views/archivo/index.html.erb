@@ -6,20 +6,29 @@
     <title>test</title>
   </head>
   <body>
-    <ul>
-  
-      <li><%=link_to 'Inicio',  main_index_path %></li>
-      <li><%=link_to 'saludo',  main_saludo_path %></li>
-      <li><%=link_to 'Formulario', archivo_index_path %></li>
-    </ul>
-    <form class="" action="/archivo/read" method="post">
-    <p>
-      <input type="text" name="nombre" value="" placeholder="ingrese su nombre"> <br></p>
-      <p>
-        <input type="text" name="apellido" value="" placeholder="ingrese su apellido"></p>
+<h1 class="card" >Archivo#index</h1>
+<table>
+  <thead>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <td colspan="2">
+      <a class="btn btn-success" href="<%= archivo_new_path %>">Nuevo </a></td>
+  </thead>
 
-    <button type="submit" name="button">Enviar</button>
-    </form>
+<tbody>
+<% @personas.each do |p| %>
+<tr>
+
+
+  <td><%= p.nombre %></td>
+  <td><%= p.apellido %></td>
+  <td>  <a class="btn btn-warning" href="<%= archivo_edit_path(p.id) %>">Editar </a></td>
+  <td>Borrar</td>
+  </tr>
+<% end %>
+</tbody>
+
+
+</table>
   </body>
 </html>
-<h1>Archivo#index</h1>
