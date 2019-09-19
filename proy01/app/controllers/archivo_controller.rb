@@ -13,7 +13,7 @@ class ArchivoController < ApplicationController
     @perso.nombre=params[:nombre]
     @perso.apellido=params[:apellido]
      if   @perso.save
-        redirect_to archivos_index_path
+        redirect_to archivo_index_path
       else
         render "new"
       end
@@ -21,5 +21,26 @@ class ArchivoController < ApplicationController
   def edit
     @id=params[:id]
     @persona=Persona.find(@id)
+  end
+  def update
+    @id=params[:id]
+    @persona=Persona.find(@id)
+    @persona.nombre=params[:nombre]
+    @persona.apellido=params[:apellido]
+    if   @persona.save
+       redirect_to archivo_index_path
+     else
+       render "edit"
+     end
+  end
+  def destroy
+    @id=params[:id]
+    @persona=Persona.find(@id)
+    if   @persona.destroy
+       redirect_to archivo_index_path
+     else
+       redirect_to archivo_index_path
+     end
+
   end
 end
