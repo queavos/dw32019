@@ -1,0 +1,21 @@
+<h1>Laboratorios</h1>
+<table>
+  <thead>
+<tr>
+  <th>Laboratorio</th>
+  <th>Activo</th>
+  <th colspan='2'> <a href="<%= laboratorios_new_path  %>">nuevo</a> </th>
+</tr>
+
+  </thead>
+  <tbody>
+    <% @lista.each do |t| %>
+    <tr>
+      <td><%= t.lab_desc %></td>
+      <td><%= t.active %></td>
+      <td><a href="<%= laboratorios_edit_path(t.id)  %>">Editar</a></td>
+      <td><a href="<%= laboratorios_delete_path(t.id)  %>">Borrar</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
