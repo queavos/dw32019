@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'rubros/index'
+  get 'rubros/new'
+  get 'rubros/:id/edit', to: 'rubros#edit', as: 'rubros_edit'
+  post 'rubros/create'
+  patch 'rubros/update'
+  delete 'rubros/:id/delete' , to: 'rubros#delete', as: 'rubros_destroy'
 #rutas laboratorios
   get 'laboratorios/index'
   get 'laboratorios/new'

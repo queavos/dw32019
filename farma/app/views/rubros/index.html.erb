@@ -1,0 +1,21 @@
+<h1>Rubros</h1>
+<table border="1" >
+  <thead>
+<tr>
+  <th>Rubro</th>
+  <th>IVA %</th>
+  <th colspan='2'> <a href="<%= rubros_new_path  %>">nuevo</a> </th>
+</tr>
+
+  </thead>
+  <tbody>
+    <% @datos.each do |t| %>
+    <tr>
+      <td><%= t.rubro_desc %></td>
+      <td><%= t.rubro_iva %></td>
+      <td><a href="<%= rubros_edit_path(t.id)  %>">Editar</a></td>
+      <td><a href="<%= rubros_destroy_path(t.id)  %>"  data-method="delete">Borrar</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
