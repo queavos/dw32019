@@ -2,9 +2,7 @@
 <%= form_for :dato, url: rubros_update_path, method: 'PATCH'  do |f| %>
 <%= f.hidden_field :id %>
 
-<%= f.label :rubro_desc, 'Nombre:' %><br>
-<%= f.text_field :rubro_desc %> <br>
-<%= f.label :rubro_iva, 'IVA:' %><br>
-<%= f.number_field :rubro_iva %> <br>
-<%= f.submit "Enviar" %>
+<%= render "form", d: f %>
+
+
 <% end %>

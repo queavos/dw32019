@@ -1,10 +1,10 @@
 <h1>Laboratorios</h1>
-<table>
+<table class="table ">
   <thead>
 <tr>
   <th>Laboratorio</th>
   <th>Activo</th>
-  <th colspan='2'> <a href="<%= laboratorios_new_path  %>">nuevo</a> </th>
+  <th colspan='2'> <a href="<%= laboratorios_new_path  %>" class="btn btn-outline-success" >nuevo</a> </th>
 </tr>
 
   </thead>
@@ -12,9 +12,10 @@
     <% @lista.each do |t| %>
     <tr>
       <td><%= t.lab_desc %></td>
-      <td><%= t.active %></td>
-      <td><a href="<%= laboratorios_edit_path(t.id)  %>">Editar</a></td>
-      <td><a href="<%= laboratorios_delete_path(t.id)  %>">Borrar</a></td>
+      <td><% if  t.active=1   %> <span class="badge badge-success">Activo</span>
+<% else  %> <span class="badge badge-danger">Inactivo</span>  <% end %>   </td>
+      <td><a href="<%= laboratorios_edit_path(t.id)  %>"  class="btn btn-outline-warning" >Editar</a></td>
+      <td><a href="<%= laboratorios_delete_path(t.id)  %>"  class="btn btn-outline-danger" >Borrar</a></td>
     </tr>
     <% end %>
   </tbody>

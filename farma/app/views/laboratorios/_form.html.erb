@@ -1,0 +1,13 @@
+<%= f.label :lab_desc, 'Nombre:', class: 'form-control' %><br>
+<%= f.text_field :lab_desc , class: 'form-control' %> <br>
+
+<div class="form-check form-check-inline">
+  <%= f.label :active, 'Activo', :value => 1, class: 'form-check-label' %>
+  <%= f.radio_button :active,1, :checked =>true, class: 'form-check-input' %>
+
+  <%= f.label :active, 'Inactivo', :value => 0, class: 'form-check-label' %>
+  <%= f.radio_button :active,0, class: 'form-check-input'  %> 
+</div>
+  <br>
+<%= f.submit "Enviar", class: ' btn  btn-primary' %> <br>
+<%= link_to "Volver a lista", laboratorios_index_path %>

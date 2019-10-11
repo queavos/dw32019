@@ -1,12 +1,5 @@
 <h1>Nuevo Laboratorio</h1>
 
 <%= form_for :laboratorio, url: laboratorios_create_path  do |f| %>
-
-<%= f.label :lab_desc, 'Nombre:' %><br>
-<%= f.text_field :lab_desc %> <br>
-<%= f.label :active, 'Activo', :value => 1 %>
-<%= f.radio_button :active,1, :checked =>true %>
-<%= f.label :active, 'Inactivo', :value => 0 %>
-<%= f.radio_button :active,0  %> <br>
-<%= f.submit "Enviar" %>
+<%= render "form", f: f %>
 <% end %>

@@ -1,9 +1,7 @@
 <h1>Nuevo Rubros</h1>
 
 <%= form_for :dato, url: rubros_create_path  do |f| %>
-<%= f.label :rubro_desc, 'Nombre:' %><br>
-<%= f.text_field :rubro_desc %> <br>
-<%= f.label :rubro_iva, 'IVA:' %><br>
-<%= f.number_field :rubro_iva %> <br>
-<%= f.submit "Enviar" %>
+
+<%= render "form", d: f %>
+
 <% end %>
