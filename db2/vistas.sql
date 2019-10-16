@@ -32,4 +32,10 @@ inner join stock stk on  trdet.lote_id=stk.lote_id
 inner join productos prods on stk.prod_id=prods.prod_id
 inner join laboratorio labs on prods.lab_id=labs.lab_id
 ======================================
-
+create or replace view vw_ventacab as
+select empleados.emple_nombre,ventas.emple_id, clientes.cliente_id, clientes.cliente_nombre, clientes.cliente_ruc,
+ventas.vent_fecha, ventas.vent_nro,
+ventas.vent_estado, ventas.vent_tipo,ventas.vent_id, "ventasTot"(ventas.vent_id)
+from ventas
+inner join empleados on ventas.emple_id=empleados.emple_id
+inner join clientes on ventas.cliente_id=clientes.cliente_id
