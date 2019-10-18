@@ -1,0 +1,19 @@
+<%= d.label :rubro_id, 'Rubro:', class: '' %><br>
+<%= d.collection_select(:rubro_id, Rubro.all, :id, :rubro_desc, class: 'form-control') %><br>
+<%= d.label :laboratorio_id, 'Laboratorio:', class: '' %><br>
+<%= d.collection_select(:laboratorio_id, Laboratorio.all, :id, :lab_desc, class: 'form-control') %><br>
+<%= d.label :descripcion, 'Descripcion:', class: '' %><br>
+<%= d.text_field :descripcion, class: 'form-control' %> <br>
+<%= d.label :precio, 'Precio:', class: '' %><br>
+<%= d.number_field :precio, class: 'form-control' %> <br>
+<%= d.label :bcode, 'Barcode:', class: '' %><br>
+<%= d.text_field :bcode, class: 'form-control' %> <br>
+<div class="form-check form-check-inline">
+  <%= d.label :activo, 'Activo', :value => 1, class: 'form-check-label' %>
+  <%= d.radio_button :activo,1, :checked =>true, class: 'form-check-input' %>
+  <%= d.label :activo, 'Inactivo', :value => 0, class: 'form-check-label' %>
+  <%= d.radio_button :activo,0, class: 'form-check-input'  %>
+</div>
+
+<%= d.submit "Enviar", class: 'btn btn-primary' %>
+<%= link_to "Volver a lista", productos_index_path %>

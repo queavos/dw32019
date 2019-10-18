@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  root 'home#index'
+  devise_for :users
   get 'rubros/index'
   get 'rubros/new'
   get 'rubros/:id/edit', to: 'rubros#edit', as: 'rubros_edit'
@@ -18,7 +21,7 @@ Rails.application.routes.draw do
   get 'productos/new'
   post 'productos/create'
   get 'productos/edit/:id' , to: 'productos#edit', as: 'productos_edit'
-  post 'productos/update'
-  get 'productos/delete/:id', to: 'productos#delete', as: 'productos_delete'
+  patch 'productos/update'
+  delete 'productos/delete/:id', to: 'productos#delete', as: 'productos_borrar'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

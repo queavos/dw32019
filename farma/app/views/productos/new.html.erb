@@ -1,2 +1,4 @@
 <h1>Productos#new</h1>
-<p>Find me in app/views/productos/new.html.erb</p>
+<%= form_for :producto, url: productos_create_path  do |d| %>
+  <%= render "form" , d: d %>
+<% end %>

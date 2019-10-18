@@ -1,9 +1,24 @@
 <h1>Productos</h1>
-<table>
+<table class="table ">
   <thead>
-    <th></th>
+    <th>Rubro</th>
+    <th>Laboratorio</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    <th>Estado</th>
+    <th colspan="2"><a href="<%= productos_new_path  %>" class="btn btn-outline-success">nuevo</a></th>
   </thead>
   <tbody>
-
+<% @lista.each do |t| %>
+<tr>
+<td> <%= t.rubro.rubro_desc %> </td>
+<td> <%= t.laboratorio.lab_desc %> </td>
+<td> <%= t.descripcion %> </td>
+<td> <%= t.precio %> </td>
+<td> <%= t.activo %> </td>
+<td> <a href="<%= productos_edit_path(t.id)  %>" class="btn btn-outline-warning">Editar</a> </td>
+<td> <a href="<%= productos_borrar_path(t.id)  %>" class="btn btn-outline-danger" data-method="delete">Borrar</a>  </td>
+</tr>
+<% end %>
   </tbody>
 </table>

@@ -1,10 +1,15 @@
 <h1>Rubros</h1>
-<table border="1" >
+<table class="table " >
   <thead>
 <tr>
   <th>Rubro</th>
   <th>IVA %</th>
-  <th colspan='2'> <a href="<%= rubros_new_path  %>">nuevo</a> </th>
+  <th colspan='2'>
+    <% if user_signed_in? %>
+     <a href="<%= rubros_new_path  %>" class="btn btn-outline-success">nuevo</a>
+     <%end%>
+
+   </th>
 </tr>
 
   </thead>
@@ -13,8 +18,13 @@
     <tr>
       <td><%= t.rubro_desc %></td>
       <td><%= t.rubro_iva %></td>
-      <td><a href="<%= rubros_edit_path(t.id)  %>">Editar</a></td>
-      <td><a href="<%= rubros_destroy_path(t.id)  %>"    >Borrar</a></td>
+       <% if user_signed_in? %>
+      <td><a href="<%= rubros_edit_path(t.id)  %>" class="btn btn-outline-warning">Editar</a></td>
+      <td><a href="<%= rubros_destroy_path(t.id)  %>" class="btn btn-outline-danger"  data-method="delete"  >Borrar</a></td>
+<%else%>
+<th colspan='2'></a> </th>
+
+<%end%>
     </tr>
     <% end %>
   </tbody>

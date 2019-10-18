@@ -1,6 +1,7 @@
-<p>soy parcial</p>
-<%= d.label :rubro_desc, 'Nombre:' %><br>
-<%= d.text_field :rubro_desc %> <br>
-<%= d.label :rubro_iva, 'IVA:' %><br>
-<%= d.number_field :rubro_iva %> <br>
-<%= d.submit "Enviar" %>
+
+<%= d.label :rubro_desc, 'Nombre:', class: '' %><br>
+<%= d.text_field :rubro_desc , class: 'form-control'%> <br>
+<%= d.label :rubro_iva, 'IVA:', class: '' %><br>
+<%= d.number_field :rubro_iva, class: 'form-control' %> <br>
+<%= d.submit "Enviar", class: 'btn btn-primary' %>
+<%= link_to "Volver a lista", rubros_index_path %>
