@@ -39,3 +39,4 @@ ventas.vent_estado, ventas.vent_tipo,ventas.vent_id, "ventasTot"(ventas.vent_id)
 from ventas
 inner join empleados on ventas.emple_id=empleados.emple_id
 inner join clientes on ventas.cliente_id=clientes.cliente_id
+
