@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rubro: one
+  laboratorio: one
+  prod_desc: MyString
+  prod_precio: 1.5
+  prod_activo: false
+  prod_bcode: MyString
+
+two:
+  rubro: two
+  laboratorio: two
+  prod_desc: MyString
+  prod_precio: 1.5
+  prod_activo: false
+  prod_bcode: MyString

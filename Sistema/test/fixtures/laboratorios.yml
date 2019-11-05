@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lab_desc: MyString
+  lab_active: false
+
+two:
+  lab_desc: MyString
+  lab_active: false

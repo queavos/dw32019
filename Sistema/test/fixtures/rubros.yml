@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rubro_desc: MyString
+  rubro_iva: 1
+
+two:
+  rubro_desc: MyString
+  rubro_iva: 1
