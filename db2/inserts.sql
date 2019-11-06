@@ -116,3 +116,13 @@ INSERT INTO public.ventasdet(
 INSERT INTO public.ventasdet(
              lote_id, vent_id, vdet_cant, vdet_precio, vdet_iva)
     VALUES ( 2, 2, 20, 8000, 5);
+==========
+
+INSERT INTO PROVEEDORES (prov_nombre, prov_ruc, prov_telef) values (
+'lala laala', '242342342','34324'
+);
+INSERT INTO public.compras(
+            prov_id, emple_id, comp_fecha, comp_nro, comp_estado)
+    VALUES ( 1, 1, '2019-11-05', '3333', 0);
+
+
