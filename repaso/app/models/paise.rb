@@ -1,0 +1,2 @@
+class Paise < ApplicationRecord
+end

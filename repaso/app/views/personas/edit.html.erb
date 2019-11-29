@@ -1,0 +1,36 @@
+<h1>Personas#edit</h1>
+<%= form_for :dato, url: personas_update_path, method: 'PATCH' do |p| %>
+<p>
+<%= p.hidden_field :id %>
+<%= p.label :apellido, 'Apellido:' %> <br>
+<%= p.text_field :apellido, class: 'form-control' %> <br>
+</p>
+<p>
+<%= p.label :nombre, 'Nombre:' %> <br>
+<%= p.text_field :nombre, class: 'form-control' %> <br>
+</p>
+<p>
+<%= p.label :fenac , 'Fecha de nacimiento:' %> <br>
+<%= p.date_field :fenac, class: 'form-control' %> <br>
+</p>
+<p>
+<%= p.label :genero , 'Genero:' %> <br>
+<%= p.radio_button :genero, 'F' %> Femenino
+<%= p.radio_button :genero, 'M' %> Masculino
+<br>
+</p>
+<p>
+<%= p.label :paise_id , 'Pais:' %> <br>
+<%= p.collection_select  :paise_id, Paise.all, :id, :nombre %>
+</p>
+<p>
+<%= p.label :recibemail , 'Recibe mail:' %> <br>
+<%= p.check_box :recibemail, {}, 'true','false' %>
+
+<br>
+</p>
+<p><a href='<%= personas_index_path %>'>Volver</a>
+  <br>
+<%=  p.submit "Enviar", class: 'btn btn-primary'  %>
+</p>
+<% end %>

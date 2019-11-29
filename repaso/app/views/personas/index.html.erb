@@ -1,0 +1,26 @@
+
+<h1>Personas#index</h1>
+<p>Find me in app/views/personas/index.html.erb</p>
+<div class="container">
+
+
+<table>
+  <thead>
+<td>id</td>  <td>apellido</td>  <td>nombre</td>  <td>edad</td><td>Genero</td>
+<td>Recibe mail</td> <td>Pais</td>
+<td colspan="2"><a href='<%= personas_new_path %>'> Nuevo</a></td>
+  </thead>
+<tbody>
+<% @lista.each do |p| %>
+<tr>
+  <td><%= p.id %></td>  <td><%= p.apellido %></td>  <td><%= p.nombre %></td>  <td><%= p.fenac %></td>
+<td><%= p.genero %></td><td><%= p.recibemail %></td>
+<td><%= p.paise.nombre %></td>
+  <td><a href='<%= personas_edit_path(p) %>'>Editar</a></td>
+  <td><a href='<%= personas_delete_path(p) %>' data-method='delete'> Borrar</a></td>
+</tr>
+<% end %>
+</tbody>
+
+</table>
+</div>

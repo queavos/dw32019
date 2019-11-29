@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apellido: MyString
+  nombre: MyString
+  fenac: 2019-11-28
+
+two:
+  apellido: MyString
+  nombre: MyString
+  fenac: 2019-11-28

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Repaso</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<div class="navbar">
+<ul>
+  <li><a href="<%= personas_index_path %>">Personas</a></li>
+  <li><a href="<%= paises_path %>">Paises</a></li>
+</ul>
+</div>
+
+    <%= yield %>
+  </body>
+</html>
